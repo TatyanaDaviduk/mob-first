@@ -90,6 +90,17 @@ a {
   font-size: 24px;
   line-height: 28px;
   color: #2B4074;
+  padding-bottom: 20px;
+  position: relative;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  background-color: #2B4074;
+  bottom: 0;
+  left: calc(50% - 50px);
+  height: 8px;
+  width: 100px;
 }
 
 .container {
@@ -419,4 +430,72 @@ a {
 .services {
   padding: 25px 0 40px;
   text-align: center;
+}
+.services__title {
+  margin-bottom: 47px;
+}
+.services__descr {
+  font-size: 20px;
+  line-height: 24px;
+  color: #4a4a4a;
+  margin-bottom: 21px;
+}
+.services__text {
+  color: #797979;
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 40px;
+}
+.services__item {
+  min-height: 310px;
+  border: 1px solid #F9F6E5;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.services__item:last-child {
+  border-bottom: 1px solid #F9F6E5;
+}
+.services__item:hover .services__item-link,
+.services__item:hover .services__item-text {
+  display: block;
+}
+.services__item:hover .services__item-title {
+  margin-bottom: 30px;
+}
+.services__item-inner {
+  border: 4px solid #2B4074;
+  margin: 18px;
+  padding: 5px 20px;
+}
+.services__item-img {
+  margin-bottom: 30px;
+}
+.services__item-title {
+  font-family: "RobotoCondensed-Bold";
+  font-weight: 700;
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+}
+.services__item-text {
+  display: none;
+  font-family: "Dosis-Regular";
+  color: #9B9B9B;
+  margin-bottom: 17px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.services__item-link {
+  display: none;
+  color: #2B4074;
+  font-family: "RobotoCondensed-Bold";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

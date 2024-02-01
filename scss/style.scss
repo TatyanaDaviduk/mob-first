@@ -41,7 +41,17 @@ a{
     font-size: 24px;
     line-height: 28px;
     color: $accent;
-    
+    padding-bottom: 20px;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: '';
+        background-color: $accent;
+        bottom: 0;
+        left: calc(50% - 50px);
+        height: 8px;
+        width: 100px;
+    }
 }
 
 .container {
@@ -406,7 +416,7 @@ a{
     text-align: center;
     // .services__inner
     &__inner {
-
+        
     }
     // .services__head
     &__head {
@@ -414,34 +424,86 @@ a{
     }
     // .services__title
     &__title {
-
+        margin-bottom: 47px;
     }
     // .services__descr
     &__descr {
+        font-size: 20px;
+        line-height: 24px;
+        color: $text-color;
+        margin-bottom: 21px;
     }
     // .services__text
     &__text {
+        color: #797979;
+        font-size: 15px;
+        line-height: 17px;
+        margin-bottom: 40px;
     }
     // .services__items
     &__items {
     }
     // .services__item
     &__item {
+        min-height: 310px;
+        border: 1px solid $bg-color;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:last-child{
+            border-bottom: 1px solid $bg-color;
+        }
+        &:hover{
+            .services__item-link,
+            .services__item-text{
+                display: block;
+            }
+            .services__item-title{
+                margin-bottom: 30px;
+            }
+        }
     }
     // .services__item-inner
     &__item-inner {
+        border: 4px solid $accent;
+        margin: 18px;
+        padding: 5px 20px;
     }
     // .services__item-img
     &__item-img {
+        margin-bottom: 30px;
     }
     // .services__item-title
     &__item-title {
+        font-family: 'RobotoCondensed-Bold';
+        font-weight: 700;
+        color: $text-color;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
     }
     // .services__item-text
     &__item-text {
+        display: none;
+        font-family: 'Dosis-Regular';
+        color: #9B9B9B;
+        margin-bottom: 17px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+
     }
     // .services__item-link
     &__item-link {
+        display: none;
+        color: $accent;
+        font-family: 'RobotoCondensed-Bold';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
 }
 
